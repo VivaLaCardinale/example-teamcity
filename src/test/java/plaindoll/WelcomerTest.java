@@ -2,6 +2,7 @@ package plaindoll;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -35,7 +36,7 @@ public class WelcomerTest {
 	@Test
     public void testHunterReplyContainsWord() {
         Welcomer welcomer = new Welcomer();
-        String reply = welcomer.getHunterReply();
-        assertTrue(reply.contains("hunter"), "The reply must contain 'hunter'!");
+        String reply = welcomer.sayHunterReply();
+        assertTrue(reply.contains("hunter"));
     }
 }
